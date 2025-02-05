@@ -21,7 +21,7 @@ public class UserController {
     @RequestMapping(path = "", method = RequestMethod.POST)
     public ResponseEntity<User> add(@RequestBody User user) {
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(this.userService.persist(user, 0));
+                .body(this.userService.persist(user, null));
     }
 
     @RequestMapping(path = "", method = RequestMethod.GET)

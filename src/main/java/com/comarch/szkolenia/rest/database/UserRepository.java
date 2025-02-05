@@ -7,10 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 public class UserRepository implements IUserRepository {
     private final List<User> users = new ArrayList<>();
-    private int id_sequence = 0;
+    private long id_sequence = 0;
 
     public UserRepository() {
         this.users.add(new User(++this.id_sequence, "janusz", "Janusz", "Kowalski", 30));
